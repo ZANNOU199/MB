@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary: #B8974A;
+  --on-primary: #ffffff;
+  --secondary: #C07055;
+  --accent: #D4C9B4;
+  --surface: #131313;
+  --on-surface: #D4C9B4;
+  --surface-variant: #353534;
+  --on-surface-variant: #998f81;
+  --button-text: #ffffff;
+}
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary);
+  --color-on-primary-container: var(--on-primary);
+
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  
+  --color-background: var(--surface);
+  --color-on-background: var(--on-surface);
+  
+  --color-outline: var(--on-surface-variant);
+  --color-outline-variant: #4d463a;
+
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+}
+
+@layer base {
+  html, body {
+    @apply bg-background text-on-surface font-body antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-nav {
+  @apply bg-surface/60 backdrop-blur-xl border-b border-white/5;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
